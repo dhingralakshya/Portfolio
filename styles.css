@@ -238,7 +238,7 @@ button:hover {
   margin-bottom: -15px;
   margin-right: -10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1300px) {
   .hamburger-menu {
     display: block;
   }
