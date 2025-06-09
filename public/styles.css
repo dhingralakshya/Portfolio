@@ -119,10 +119,9 @@ body {
 }
 .projects {
   color: #3aafa9;
-  margin-top: 80px;
-  margin-left: 170px;
-  margin-right: 140px;
-  padding-top: 40px;
+  margin: 0 auto;
+  padding: 40px 16px 0 16px;
+  max-width: 1200px;
 }
 .projects h1 {
   text-align: center;
@@ -132,17 +131,24 @@ body {
 .all-projects {
   display: flex;
   gap: 50px;
-  margin-right: 50px;
+  margin-right: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .project {
   text-align: center;
-  display: block;
+  display: flex;              /* Use flex for vertical alignment */
+  flex-direction: column;     /* Stack content vertically */
   border: 1.5px solid #17252a;
-  justify-content: center;
-  padding: 15px;
-  padding-top: 24px;
+  justify-content: flex-start;/* Align content to the top */
+  align-items: center;        /* Center content horizontally */
+  padding: 15px 10px 24px 10px;
   border-radius: 20px;
-  flex: 1;
+  flex: 1 1 300px;            /* Grow, shrink, and base width */
+  min-width: 250px;           /* Prevent too small */
+  max-width: 350px;           /* Prevent too wide */
+  min-height: 420px;          /* Set a minimum height */
+  max-height: 420px; 
 }
 .project p {
   color: #17252a;
@@ -190,10 +196,11 @@ button:hover {
   display: flex;
   gap: 80px;
   align-items: start;
-
+  overflow: hidden;
   background-color: #3aafa9;
   margin: -10px;
   margin-top: 100px;
+  padding: 50px;
 }
 .quick-links {
   display: flex;
@@ -207,6 +214,11 @@ button:hover {
   border-bottom-style: solid;
   border-bottom-width: 3.1px;
   width: fit-content;
+}
+.me p{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .quick-links h1 {
   margin-bottom: 4px;

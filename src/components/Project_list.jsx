@@ -5,7 +5,7 @@ function Project_list(props) {
     <div class="project">
       <div class="project-image">
         <a href={props.weblink}>
-          <img class="twitter" src={props.image} width="500" height="300" />
+          <img class="twitter" src={props.image} width="330" height="200" />
         </a>
       </div>
       <h2>{props.name}</h2>

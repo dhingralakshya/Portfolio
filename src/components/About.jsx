@@ -12,12 +12,7 @@ function About() {
       <div class="details">
         <h1>Hi, I'm Lakshya Dhingra!</h1>
         <p>
-          A BTech CSE student at KIIT University, skilled in C, Python, Java,
-          HTML, CSS, JavaScript, and Bootstrap. Developed projects like a unit
-          conversion webpage, Twitter clone, and AI bot integrating ChatGPT with
-          Discord. Keen interest in coding, web development, sports news, and
-          gaming trends. Passionate about technology and eager to continuously
-          learn and expand knowledge.
+        I am a passionate full-stack developer with expertise in building responsive and user-friendly applications using React, Node.js, and MongoDB. Skilled in C, Java, and Python, I enjoy solving complex problems and delivering innovative solutions. With experience in projects like KeepDesk and a to-do list app, I continually explore new technologies to enhance my craft.
         </p>
       </div>
     
