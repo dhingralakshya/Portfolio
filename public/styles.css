@@ -137,17 +137,17 @@ body {
 }
 .project {
   text-align: center;
-  display: flex;              /* Use flex for vertical alignment */
-  flex-direction: column;     /* Stack content vertically */
+  display: flex;
+  flex-direction: column;
   border: 1.5px solid #17252a;
-  justify-content: flex-start;/* Align content to the top */
-  align-items: center;        /* Center content horizontally */
+  justify-content: flex-start;
+  align-items: center;
   padding: 15px 10px 24px 10px;
   border-radius: 20px;
-  flex: 1 1 300px;            /* Grow, shrink, and base width */
-  min-width: 250px;           /* Prevent too small */
-  max-width: 350px;           /* Prevent too wide */
-  min-height: 420px;          /* Set a minimum height */
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 350px;
+  min-height: 420px;
   max-height: 420px; 
 }
 .project p {
