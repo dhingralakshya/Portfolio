@@ -1,19 +1,14 @@
 {
   "files": {
-    "main.js": "/Portfolio/static/js/main.f21a2821.js",
+    "main.js": "/Portfolio/static/js/main.d0a3317b.js",
     "static/media/keepdesk.png": "/Portfolio/static/media/keepdesk.62fc4ce11a5fc2bc51b1.png",
     "static/media/my_image.jpg": "/Portfolio/static/media/my_image.4f2c5e15a13f88941559.jpg",
-    "static/media/C_logo.png": "/Portfolio/static/media/C_logo.e579053da5e658b7c9e6.png",
-    "static/media/Python_logo.png": "/Portfolio/static/media/Python_logo.f9dc70303b81180b774d.png",
     "static/media/senitment.png": "/Portfolio/static/media/senitment.e679f5892da603f947a2.png",
     "static/media/todolist.png": "/Portfolio/static/media/todolist.d913dcc6c28060cb82e5.png",
-    "static/media/mongo.svg": "/Portfolio/static/media/mongo.39f380d2a6ceb81b45b3488c45831da1.svg",
-    "static/media/Node_logo.webp": "/Portfolio/static/media/Node_logo.5a26fe67710af183e39d.webp",
-    "static/media/mysql-logo.svg": "/Portfolio/static/media/mysql-logo.17e572d590819cbe5cac74acfecb45da.svg",
     "index.html": "/Portfolio/index.html",
-    "main.f21a2821.js.map": "/Portfolio/static/js/main.f21a2821.js.map"
+    "main.d0a3317b.js.map": "/Portfolio/static/js/main.d0a3317b.js.map"
   },
   "entrypoints": [
-    "static/js/main.f21a2821.js"
+    "static/js/main.d0a3317b.js"
   ]
 }
