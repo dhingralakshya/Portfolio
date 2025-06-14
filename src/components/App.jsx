@@ -6,7 +6,7 @@ import Project from "./Project";
 
 function App() {
   return (
-    <div>
+    <div className="main-content">
       <Header />
       <About />
       <Skill />

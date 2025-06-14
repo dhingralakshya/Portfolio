@@ -3,7 +3,7 @@ import React from "react";
 function AllSkills(props) {
   return (
     <div class="skill">
-      <img src={props.imgLink} />
+      {props.icon}
       <h6>{props.skill}</h6>
     </div>
   );
