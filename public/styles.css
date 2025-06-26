@@ -172,7 +172,13 @@ html {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-
+.skill:hover{
+  transform: scale(1.3);
+}
+.skill.dimmed {
+  opacity: 0.4;
+  filter: grayscale(10%);
+}
 .skill img {
   width: clamp(60px, 8vw, 100px);
   height: clamp(60px, 8vw, 100px);
