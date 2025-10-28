@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import mail from "./images/mail.jpg";
-import phone from "./images/phone.png";
+import EmailIcon from '@mui/icons-material/Email';
+import CallIcon from '@mui/icons-material/Call';
+import DownloadIcon from '@mui/icons-material/Download';
+import "./styles/Footer.css";
 
 const parentVariants = {
   hidden: {},
@@ -78,7 +80,7 @@ function Footer() {
               aria-label="Download Lakshya's Resume"
             >
               <button className="resume-btn">
-                📄 Download Resume
+                <DownloadIcon className="btn-icon" /> Download Resume
               </button>
             </a>
           </div>
@@ -88,25 +90,13 @@ function Footer() {
           <h1>Contact Me</h1>
           <div className="contact-info">
             <div className="contact-item">
-              <img 
-                className="contact-icon" 
-                src={mail} 
-                width="20" 
-                height="20"
-                alt="Email icon" 
-              />
+              <EmailIcon className="contact-icon" />
               <a href="mailto:lakshyadhingra26@gmail.com">
                 lakshyadhingra26@gmail.com
               </a>
             </div>
             <div className="contact-item">
-              <img 
-                className="contact-icon" 
-                src={phone} 
-                width="20" 
-                height="20"
-                alt="Phone icon" 
-              />
+              <CallIcon className="contact-icon" />
               <a href="tel:+918355076355">
                 +91 8355076355
               </a>

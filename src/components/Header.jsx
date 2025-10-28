@@ -49,6 +49,7 @@ function Header() {
         >
           {[
             { id: "#about-me", section: "About" },
+            { id: "#experience", section: "Experience" },
             { id: "#skills", section: "Skills" },
             { id: "#projects", section: "Projects" },
             { id: "#contact", section: "Contact" },

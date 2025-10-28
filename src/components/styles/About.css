@@ -1,0 +1,146 @@
+.about {
+  /* padding: clamp(60px, 10vw, 100px) clamp(20px, 5vw, 50px); */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* background: linear-gradient(135deg, #f9fafb 0%, #e8f4f3 100%); */
+}
+
+.about-content {
+  background: white;
+  border-radius: 20px;
+  padding: clamp(40px, 6vw, 40px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.about-content > h1 {
+  text-align: center;
+  font-size: clamp(32px, 6vw, 48px);
+  margin-bottom: clamp(40px, 6vw, 60px);
+  font-weight: 600;
+  color: #3aafa9;
+  position: relative;
+}
+
+.about-content > h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3aafa9, #17252a);
+  border-radius: 2px;
+}
+
+.about-story,
+.about-approach,
+.about-interests {
+  margin-bottom: clamp(35px, 5vw, 50px);
+}
+
+.about-story h2,
+.about-approach h2,
+.about-interests h2,
+.about-values h2 {
+  font-size: clamp(22px, 3.5vw, 28px);
+  color: #17252a;
+  margin-bottom: 18px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 20px;
+}
+
+.about-story h2::before,
+.about-approach h2::before,
+.about-interests h2::before,
+.about-values h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 70%;
+  background: #3aafa9;
+  border-radius: 3px;
+}
+
+.about-story p,
+.about-approach p,
+.about-interests p {
+  font-size: clamp(15px, 2.5vw, 18px);
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-values {
+  margin-top: clamp(40px, 6vw, 60px);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(20px, 3vw, 30px);
+  margin-top: 30px;
+}
+
+.value-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f3 100%);
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: clamp(25px, 4vw, 35px);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(58, 175, 169, 0.2);
+  border-color: #3aafa9;
+}
+
+.value-icon {
+  font-size: clamp(35px, 5vw, 50px);
+  display: block;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: clamp(18px, 2.5vw, 22px);
+  color: #3aafa9;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.value-card p {
+  font-size: clamp(14px, 2vw, 16px);
+  color: #666;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    padding: clamp(25px, 5vw, 35px);
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story p,
+  .about-approach p,
+  .about-interests p {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-story h2::before,
+  .about-approach h2::before,
+  .about-interests h2::before,
+  .about-values h2::before {
+    width: 4px;
+  }
+}

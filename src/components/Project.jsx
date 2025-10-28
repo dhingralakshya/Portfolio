@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Project_List from "./Project_List";
-import todolist from "./images/todolist.png";
-import keepdesk from "./images/keepdesk.png";
+import DocAI from "./images/DocAI.png";
+import StayFinder from "./images/StayFinder.png";
 import sentiment from "./images/senitment.png";
 import { motion } from "framer-motion";
+import "./styles/Project.css";
 
 const projectVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -31,79 +32,55 @@ const childVariants = {
   }
 };
 
+const projects = [
+  {
+    id: 1,
+    name: "DocumentAI",
+    desc: "An AI-powered system that extracts, analyzes, and organizes key information from documents for automated processing.",
+    image: DocAI,
+    weblink: "https://github.com/dhyanchandmarndi/Document-AI",
+    liveLink: null // Add live demo link if available
+  },
+  {
+    id: 2,
+    name: "StayFinder",
+    desc: "A web application that helps users search and book accommodations with real-time availability and pricing.",
+    image: StayFinder,
+    weblink: "https://github.com/dhingralakshya/StayFinder",
+    liveLink: null
+  },
+  {
+    id: 3,
+    name: "Real-Time Twitter Sentiment Analyzer",
+    desc: "Real-time sentiment analysis of tweets based on your chosen keyword using advanced NLP techniques.",
+    image: sentiment,
+    weblink: "https://github.com/dhingralakshya/Real-Time-Sentiment-Analysis",
+    liveLink: null
+  }
+];
+
 function Project() {
-  const [scrollDir, setScrollDir] = useState("down");
-  const [inView, setInView] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const lastScrollY = useRef(window.scrollY);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currY = window.scrollY;
-      setScrollDir(currY > lastScrollY.current ? "down" : "up");
-      lastScrollY.current = currY;
-
-      if (sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        const nowInView = rect.top < window.innerHeight * 0.6 && rect.bottom > 0;
-        setInView(nowInView);
-        
-        // Reset animation when scrolling up and out of view
-        if (!nowInView && hasAnimated && scrollDir === "up") {
-          setHasAnimated(false);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [hasAnimated, scrollDir]);
-
-  useEffect(() => {
-    if (inView && scrollDir === "down" && !hasAnimated) {
-      setHasAnimated(true);
-    }
-  }, [inView, scrollDir, hasAnimated]);
-
   return (
-    <section className="projects" id="projects" ref={sectionRef}>
+    <section className="projects" id="projects">
       <h1>My Projects</h1>
       <motion.div 
-        animate={hasAnimated ? "visible" : "hidden"} 
         variants={projectVariants} 
-        initial="hidden" 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
         className="all-projects"
       >
-        <motion.div variants={childVariants}>
-          <Project_List
-            weblink="https://github.com/dhingralakshya/To-Do-List-Web-Application"
-            name="To-Do-List Web Application"
-            desc="A sleek to-do list web app built with HTML, CSS, JavaScript, and Node.js for efficient task management and a smooth user experience."
-            image={todolist}
-            // technologies={["HTML", "CSS", "JavaScript", "Node.js"]}
-          />
-        </motion.div>
-        
-        <motion.div variants={childVariants}>
-          <Project_List
-            weblink="https://github.com/dhingralakshya/KeepDesk"
-            name="KeepDesk"
-            desc="KeepDesk is a desktop note-taking app built with React, Node.js/Express, and MongoDB for seamless and organized note management."
-            image={keepdesk}
-            // technologies={["React", "Node.js", "Express", "MongoDB"]}
-          />
-        </motion.div>
-        
-        <motion.div variants={childVariants}>
-          <Project_List
-            weblink="https://github.com/dhingralakshya/Real-Time-Sentiment-Analysis"
-            name="Real-Time Twitter Sentiment Analyzer"
-            desc="Real-time sentiment analysis of tweets based on your chosen keyword using advanced NLP techniques."
-            image={sentiment}
-            // technologies={["Python", "NLP", "Twitter API", "Machine Learning"]}
-          />
-        </motion.div>
+        {projects.map((project) => (
+          <motion.div key={project.id} variants={childVariants}>
+            <Project_List
+              name={project.name}
+              desc={project.desc}
+              image={project.image}
+              weblink={project.weblink}
+              liveLink={project.liveLink}
+            />
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   );
