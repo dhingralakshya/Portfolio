@@ -74,7 +74,7 @@ function Footer() {
           </div>
           <div>
             <a 
-              href="https://drive.google.com/file/d/1G-uoQkFsNTVAwe7Z3hq90qfY0AHTAnJz/view?usp=sharing"
+              href="https://drive.google.com/file/d/1SBWVboxzeG_62Hn4oQSqe7PBrd1vrlhE/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download Lakshya's Resume"
